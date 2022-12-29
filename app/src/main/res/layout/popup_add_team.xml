@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    android:layout_margin="18dp"
+    android:scrollbars="vertical"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/flunksaurier"
+        android:background="@color/background"
+
+
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/img_logo"
+        android:hint="Teamname"
+        android:textColorHint="@color/lightgreen"
+        android:backgroundTint="@color/darkgreen"
+        android:maxLines="1"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:id="@+id/edittxt_teamname"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edittxt_teamname"
+        android:hint="Spieler 1"
+        android:textColorHint="@color/lightgreen"
+        android:backgroundTint="@color/darkgreen"
+        android:maxLines="1"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:id="@+id/edittxt_player1"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edittxt_player1"
+        android:hint="Spieler 2"
+        android:textColorHint="@color/lightgreen"
+        android:backgroundTint="@color/darkgreen"
+        android:maxLines="1"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:id="@+id/edittxt_player2"/>
+
+    <EditText
+        android:id="@+id/edittxt_teambier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edittxt_player2"
+        android:hint="Teambier"
+        android:textColorHint="@color/lightgreen"
+        android:backgroundTint="@color/darkgreen"
+        android:maxLines="1"
+        android:imeOptions="actionDone"
+        android:inputType="text"/>
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edittxt_teambier"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintRight_toLeftOf="@id/btn_create"
+        android:background="@drawable/button_grey_slim_frame"
+        android:text="Zurück"
+        android:textColor="@color/background"
+        />
+
+    <Button
+        android:id="@+id/btn_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/btn_cancel"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edittxt_teambier"
+        android:background="@drawable/button_grey_slim_frame"
+        android:text="Team erstellen"
+        android:textColor="@color/background"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    android:layout_margin="18dp"
+    android:padding="8dp"
+    android:scrollbars="vertical"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_deleteteam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wie soll das Turnier heißen?"
+        android:textSize="@dimen/medium_size"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_cancel"
+        android:textColor="@color/textcolor"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/nunito_semibold"
+        />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintRight_toLeftOf="@id/btn_delete_team"
+        android:background="@drawable/button_grey_slim_frame"
+        android:text="Zurück"
+        android:textColor="@color/background"
+
+        />
+
+    <Button
+        android:id="@+id/btn_delete_team"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/btn_cancel"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/button_grey_slim_frame"
+        android:text="Team löschen"
+        android:textColor="@color/background"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

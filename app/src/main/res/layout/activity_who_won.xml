@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".WhoWonActivity">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:background="@drawable/header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/txtView_league"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Wer hat gewonnen?"
+        android:padding="10dp"
+        android:textColor="@color/grey"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:orientation="vertical"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/button_grey_slim_frame"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginBottom="24dp"
+            tools:layout_editor_absoluteX="199dp"
+            tools:layout_editor_absoluteY="354dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_team1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="24dp"
+                android:padding="13dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="0.3"
+                android:background="@drawable/button_chooseselection"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="selectWinner">>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_team1_player1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:layout_constraintLeft_toLeftOf="@id/layout_team1"
+                    app:layout_constraintTop_toTopOf="@id/layout_team1"
+                    app:layout_constraintBottom_toTopOf="@id/layout_team1_player4"
+                    app:layout_constraintRight_toLeftOf="@id/layout_team1_player2"
+                    >
+
+                    <ImageView
+                        android:id="@+id/avatar_team1_player1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/head12"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/name_team1_player1"
+                        />
+                    <TextView
+                        android:id="@+id/name_team1_player1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/avatar_team1_player1"
+                        app:layout_constraintLeft_toLeftOf="@id/avatar_team1_player1"
+                        app:layout_constraintRight_toRightOf="@id/avatar_team1_player1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_team1_player2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:layout_constraintLeft_toRightOf="@id/layout_team1_player1"
+                    app:layout_constraintTop_toTopOf="@id/layout_team1_player1"
+                    app:layout_constraintRight_toLeftOf="@id/layout_team1_player3"
+                    app:layout_constraintBottom_toBottomOf="@id/layout_team1_player1"
+                    >
+                    <ImageView
+                        android:id="@+id/avatar_team1_player2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/head12"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/name_team1_player2"
+                        />
+                    <TextView
+                        android:id="@+id/name_team1_player2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/avatar_team1_player2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_team1_player3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:layout_constraintLeft_toRightOf="@id/layout_team1_player2"
+                    app:layout_constraintRight_toRightOf="@+id/layout_team1"
+                    app:layout_constraintTop_toTopOf="@id/layout_team1_player1"
+                    app:layout_constraintBottom_toBottomOf="@id/layout_team1_player1"
+                    >
+                    <ImageView
+                        android:id="@+id/avatar_team1_player3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/head12"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/name_team1_player3"
+                        />
+                    <TextView
+                        android:id="@+id/name_team1_player3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/avatar_team1_player3"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_team1_player4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:layout_constraintLeft_toRightOf="@id/layout_team1_player1"
+                    app:layout_constraintRight_toLeftOf="@+id/layout_team1_player2"
+                    app:layout_constraintTop_toBottomOf="@id/layout_team1_player1"
+                    app:layout_constraintBottom_toBottomOf="@id/layout_team1"
+                    >
+                    <ImageView
+                        android:id="@+id/avatar_team1_player4"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/head12"
+                        android:scaleType="fitXY"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/name_team1_player4"
+                        />
+                    <TextView
+                        android:id="@+id/name_team1_player4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/avatar_team1_player4"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_team1_player5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:layout_constraintLeft_toRightOf="@id/layout_team1_player2"
+                    app:layout_constraintRight_toLeftOf="@+id/layout_team1_player3"
+                    app:layout_constraintTop_toBottomOf="@id/layout_team1_player1"
+                    app:layout_constraintBottom_toBottomOf="@id/layout_team1_player4"
+                    >
+                    <ImageView
+                        android:id="@+id/avatar_team1_player5"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/head12"
+                        android:scaleType="fitXY"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/name_team1_player5"
+                        />
+                    <TextView
+                        android:id="@+id/name_team1_player5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/avatar_team1_player5"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.05" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_team2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="16dp"
+                android:padding="13dp"
+                android:layout_weight="0.3"
+                android:background="@drawable/button_chooseselection"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="selectWinner">>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_team2_player1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:layout_constraintLeft_toLeftOf="@id/layout_team2"
+                    app:layout_constraintTop_toTopOf="@id/layout_team2"
+                    app:layout_constraintBottom_toTopOf="@id/layout_team2_player4"
+                    app:layout_constraintRight_toLeftOf="@id/layout_team2_player2"
+                    >
+                    <ImageView
+                        android:id="@+id/avatar_team2_player1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/head12"
+                        android:scaleType="fitXY"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/name_team2_player1"
+                        />
+                    <TextView
+                        android:id="@+id/name_team2_player1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/avatar_team2_player1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_team2_player2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:layout_constraintLeft_toRightOf="@id/layout_team2_player1"
+                    app:layout_constraintTop_toTopOf="@id/layout_team2_player1"
+                    app:layout_constraintRight_toLeftOf="@id/layout_team2_player3"
+                    app:layout_constraintBottom_toBottomOf="@id/layout_team2_player1"
+                    >
+                    <ImageView
+                        android:id="@+id/avatar_team2_player2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/head12"
+                        android:scaleType="fitXY"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/name_team2_player2"
+                        />
+                    <TextView
+                        android:id="@+id/name_team2_player2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/avatar_team2_player2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_team2_player3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:layout_constraintLeft_toRightOf="@id/layout_team2_player2"
+                    app:layout_constraintRight_toRightOf="@+id/layout_team2"
+                    app:layout_constraintTop_toTopOf="@id/layout_team2_player1"
+                    app:layout_constraintBottom_toBottomOf="@id/layout_team2_player1"
+                    >
+                    <ImageView
+                        android:id="@+id/avatar_team2_player3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/head12"
+                        android:scaleType="fitXY"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/name_team2_player3"
+                        />
+                    <TextView
+                        android:id="@+id/name_team2_player3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/avatar_team2_player3"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_team2_player4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:layout_constraintLeft_toRightOf="@id/layout_team2_player1"
+                    app:layout_constraintRight_toLeftOf="@+id/layout_team2_player2"
+                    app:layout_constraintTop_toBottomOf="@id/layout_team2_player1"
+                    app:layout_constraintBottom_toBottomOf="@id/layout_team2"
+                    >
+                    <ImageView
+                        android:id="@+id/avatar_team2_player4"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/head12"
+                        android:scaleType="fitXY"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/name_team2_player4"
+                        />
+                    <TextView
+                        android:id="@+id/name_team2_player4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/avatar_team2_player4"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_team2_player5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:layout_constraintLeft_toRightOf="@id/layout_team2_player2"
+                    app:layout_constraintRight_toLeftOf="@+id/layout_team2_player3"
+                    app:layout_constraintTop_toTopOf="@id/layout_team2_player4"
+                    app:layout_constraintBottom_toBottomOf="@id/layout_team2_player4"
+                    >
+                    <ImageView
+                        android:id="@+id/avatar_team2_player5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/head12"
+                        android:scaleType="fitXY"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/name_team2_player5"
+                        />
+                    <TextView
+                        android:id="@+id/name_team2_player5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/avatar_team2_player5"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <CheckBox
+                android:id="@+id/checkbox_knechtung"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.2"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layoutDirection="rtl"
+                android:text="Knechtung:"
+                android:textSize="26dp"
+                android:fontFamily="@font/nunito_semibold"
+                android:buttonTint="@color/lightgreen"
+                android:textColor="@color/textcolor"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/button_end"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/green_button"
+            android:clickable="true"
+            android:text="Beenden"
+            android:fontFamily="@font/nunito_bold"
+            android:textSize="40dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/textcolor"
+            android:onClick="endGame"
+            />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

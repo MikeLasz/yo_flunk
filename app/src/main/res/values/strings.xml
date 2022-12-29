@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Yo Flunk!</string>
+    <string name="title_activity_prepare_flunk">prepareFlunkActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="title_activity_stats">statsActivity</string>
+    <string name="tab_spiele">Spiele</string>
+    <string name="tab_treffer">Treffer</string>
+    <string name="tab_saison">Saison</string>
+    <string name="tab_letzespiele">Letzte Spiele</string>
+    <string name="tab_tabelle">Tabelle</string>
+    <string name="tab_turniere">Letzte Turniere</string>
+    <string name="tab_gruppenphase">Gruppenphase</string>
+    <string name="tab_nextgames">Nächsten Spiele</string>
+    <string name="tab_brauereien">Brauereien</string>
+    <string name="tab_zeit">Zeit</string>
+    <string name="tab_playoffs">Playoffs</string>
+    <string name="tab_group1">Gruppe 1</string>
+    <string name="tab_group2">Gruppe 2</string>
+    <string name="tab_group3">Gruppe 3</string>
+    <string name="tab_group4">Gruppe 4</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_tabelle_frag">tabelleActivity_frag</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+
+
+    <string name="league_name">Here comes the name of the league (how it is being displayed)</string>
+
+</resources>

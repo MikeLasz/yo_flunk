@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SwitchTheme" parent="Theme.AppCompat.Light">
+        <item name="android:statusBarColor">@color/darkgreen</item>
+        <item name="android:colorControlActivated">@color/darkgreen</item>
+        <item name="colorPrimary">@color/darkgreen</item>
+        <item name="colorPrimaryDark">@color/darkgreen</item>
+
+    </style>
+
+</resources>

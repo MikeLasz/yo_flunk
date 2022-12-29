@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".OverviewTournamentActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightgreen"
+        android:theme="@style/Theme.Yoflunk.AppBarOverlay">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="66dp"
+            android:background="@drawable/header"
+            android:minHeight="?actionBarSize"
+            android:padding="10dp"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="@color/grey"
+            android:textSize="22dp"
+            android:text="Gruppenphase"
+            android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="66dp">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            app:tabSelectedTextColor="@color/textcolor"
+            app:tabIconTint="@color/textcolor"
+            app:tabTextColor="@color/textcolor"
+            app:tabTextAppearance="@style/TabLayoutStyle_tournamentGroupStage"
+            app:tabBackground="@drawable/tabs_selector"
+            android:background="?attr/colorPrimary"/>
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6"
+            android:background="@color/background"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:layout_margin="8dp"
+            android:orientation="vertical"
+            android:background="@drawable/table_box"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:paddingLeft="8dp"
+                android:textSize="@dimen/text_size"
+                android:text="Top-Scorer der Gruppe:"
+                android:fontFamily="@font/nunito_bold"
+                android:textColor="@color/textcolor"
+                android:layout_margin="8dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Coming Soon!"
+                android:textSize="@dimen/medium_size"
+                android:fontFamily="@font/nunito_semibold"
+                android:gravity="center"
+                android:paddingBottom="20dp"
+                android:textColor="@color/textcolor"
+                />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/button_end"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/green_button"
+            android:clickable="true"
+            android:text="Turnier-\nÜbersicht"
+            android:fontFamily="@font/nunito_bold"
+            android:textSize="@dimen/large_text"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/textcolor"
+            android:onClick="openOverview"
+            />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

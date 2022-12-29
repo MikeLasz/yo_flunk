@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="heads">
+        <item>@drawable/head1</item>
+        <item>@drawable/head2</item>
+        <item>@drawable/head3</item>
+        <item>@drawable/head4</item>
+        <item>@drawable/head5</item>
+        <item>@drawable/head6</item>
+        <item>@drawable/head7</item>
+        <item>@drawable/head8</item>
+        <item>@drawable/head9</item>
+        <item>@drawable/head10</item>
+        <item>@drawable/head11</item>
+        <item>@drawable/head12</item>
+        <item>@drawable/head13</item>
+        <item>@drawable/head14</item>
+        <item>@drawable/head15</item>
+        <item>@drawable/head16</item>
+        <item>@drawable/head17</item>
+        <item>@drawable/head18</item>
+        <item>@drawable/head19</item>
+        <item>@drawable/head20</item>
+        <item>@drawable/head21</item>
+    </integer-array>
+
+    <integer-array name="bodies">
+        <item>@drawable/body1</item>
+        <item>@drawable/body3</item>
+        <item>@drawable/body4</item>
+        <item>@drawable/body2</item>
+        <item>@drawable/body5</item>
+        <item>@drawable/body6</item>
+    </integer-array>
+</resources>

@@ -1,0 +1,1597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".PlayGameActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/foot"
+        android:gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout12"></View>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:background="@drawable/header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/txtView_league"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Gut Flunk!"
+        android:textColor="@color/grey"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <ImageView
+        android:id="@+id/rules"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/regelwerk_info"
+        android:layout_marginRight="16dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtView_league" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout12"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="64dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtView_league">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="0.25"
+            android:orientation="horizontal">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:gravity="center"
+
+                >
+
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/shadow"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/button_endgame"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/green_button"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:onClick="gameIsOver"
+                    android:text="Spiel beenden"
+                    android:textColor="@color/textcolor"
+                    android:textSize="25dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4" />
+
+        </LinearLayout>
+
+
+        <!-- Space between views -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.05" />
+        <!-- Each team needs 3 LinearLayouts
+             One for Treffer, Strafschluck, Strafbier,
+             respectively. -->
+        <LinearLayout
+            android:id="@+id/Container_team1Treffer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="0.3"
+            android:background="@drawable/blue_view"
+            android:orientation="horizontal">
+
+            <!-- Layout for each player- up to 5 Players-->
+            <!-- Nr 1-->
+            <LinearLayout
+                android:id="@+id/layout_team1_player1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_marginBottom="0dp"
+                android:translationZ="90dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/score_team1_player1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="50dp" />
+
+                <TextView
+                    android:id="@+id/name_team1_player1"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/green_button_no_frame"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:onClick="increaseScore"
+                    android:text="player1"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+
+            <!-- Nr 2-->
+            <LinearLayout
+                android:id="@+id/layout_team1_player2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/blue_withoutframe"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="placeholder" />
+
+                <TextView
+                    android:id="@+id/name_team1_player2"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/green_button_no_frame"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:onClick="increaseScore"
+                    android:text="player2"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:id="@+id/score_team1_player2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="50dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_team1_player3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:translationZ="90dp"
+                android:layout_marginBottom="0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/score_team1_player3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="50dp" />
+
+                <TextView
+                    android:id="@+id/name_team1_player3"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/green_button_no_frame"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:onClick="increaseScore"
+                    android:text="player3"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_team1_player4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_marginBottom="0dp"
+                android:orientation="vertical"
+                android:background="@drawable/blue_withoutframe">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="placeholder" />
+
+                <TextView
+                    android:id="@+id/name_team1_player4"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/green_button_no_frame"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:onClick="increaseScore"
+                    android:text="player4"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:id="@+id/score_team1_player4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="50dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_team1_player5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_marginBottom="0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/score_team1_player5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="50dp" />
+
+                <TextView
+                    android:id="@+id/name_team1_player5"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/green_button_no_frame"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:onClick="increaseScore"
+                    android:text="player5"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Container_team1Strafschluck"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="0"
+            android:background="@drawable/blue_view"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <!-- Layout for each player- up to 5 Players-->
+            <!-- Nr 1-->
+            <LinearLayout
+                android:id="@+id/layout_team1_player1_strafschluck"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_marginBottom="0dp"
+                android:translationZ="90dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/score_team1_player1_strafschluck"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="50dp" />
+
+                <TextView
+                    android:id="@+id/name_team1_player1_strafschluck"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/green_button_no_frame"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:onClick="increaseScore"
+                    android:text="player1"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+
+            <!-- Nr 2-->
+            <LinearLayout
+                android:id="@+id/layout_team1_player2_strafschluck"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/blue_withoutframe"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="placeholder" />
+
+                <TextView
+                    android:id="@+id/name_team1_player2_strafschluck"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/green_button_no_frame"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:onClick="increaseScore"
+                    android:text="player2"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:id="@+id/score_team1_player2_strafschluck"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="50dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_team1_player3_strafschluck"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_marginBottom="0dp"
+                android:orientation="vertical"
+                android:translationZ="90dp">
+
+                <TextView
+                    android:id="@+id/score_team1_player3_strafschluck"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="50dp" />
+
+                <TextView
+                    android:id="@+id/name_team1_player3_strafschluck"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/green_button_no_frame"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:onClick="increaseScore"
+                    android:text="player3"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_team1_player4_strafschluck"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_marginBottom="0dp"
+                android:orientation="vertical"
+                android:background="@drawable/blue_withoutframe">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="placeholder" />
+
+                <TextView
+                    android:id="@+id/name_team1_player4_strafschluck"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/green_button_no_frame"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:onClick="increaseScore"
+                    android:text="player4"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:id="@+id/score_team1_player4_strafschluck"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="50dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_team1_player5_strafschluck"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_marginBottom="0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/score_team1_player5_strafschluck"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="50dp" />
+
+                <TextView
+                    android:id="@+id/name_team1_player5_strafschluck"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/green_button_no_frame"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:onClick="increaseScore"
+                    android:text="player5"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Container_team1Strafbier"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="0"
+            android:background="@drawable/blue_view"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <!-- Layout for each player- up to 5 Players-->
+            <!-- Nr 1-->
+            <LinearLayout
+                android:id="@+id/layout_team1_player1_strafbier"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_marginBottom="0dp"
+                android:translationZ="90dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/score_team1_player1_strafbier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="50dp" />
+
+                <TextView
+                    android:id="@+id/name_team1_player1_strafbier"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/green_button_no_frame"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:onClick="increaseScore"
+                    android:text="player1"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+
+            <!-- Nr 2-->
+            <LinearLayout
+                android:id="@+id/layout_team1_player2_strafbier"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/blue_withoutframe"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="placeholder" />
+
+                <TextView
+                    android:id="@+id/name_team1_player2_strafbier"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/green_button_no_frame"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:onClick="increaseScore"
+                    android:text="player2"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:id="@+id/score_team1_player2_strafbier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="50dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_team1_player3_strafbier"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_marginBottom="0dp"
+                android:orientation="vertical"
+                android:translationZ="90dp">
+
+                <TextView
+                    android:id="@+id/score_team1_player3_strafbier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="50dp" />
+
+                <TextView
+                    android:id="@+id/name_team1_player3_strafbier"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/green_button_no_frame"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:onClick="increaseScore"
+                    android:text="player3"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_team1_player4_strafbier"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_marginBottom="0dp"
+                android:orientation="vertical"
+                android:background="@drawable/blue_withoutframe">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="placeholder" />
+
+                <TextView
+                    android:id="@+id/name_team1_player4_strafbier"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/green_button_no_frame"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:onClick="increaseScore"
+                    android:text="player4"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:id="@+id/score_team1_player4_strafbier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="50dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_team1_player5_strafbier"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_marginBottom="0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/score_team1_player5_strafbier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="50dp" />
+
+                <TextView
+                    android:id="@+id/name_team1_player5_strafbier"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/green_button_no_frame"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:onClick="increaseScore"
+                    android:text="player5"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.05" />
+
+        <LinearLayout
+            android:id="@+id/Container_team2Treffer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="0.3"
+            android:background="@drawable/grey_view"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layout_team2_player1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_marginBottom="0dp"
+                android:translationZ="90dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/score_team2_player1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="50dp" />
+
+                <TextView
+                    android:id="@+id/name_team2_player1"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="fill_vertical"
+                    android:background="@drawable/green_button_no_frame"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:onClick="increaseScore"
+                    android:text="player1"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+
+            <!-- Nr 2-->
+            <LinearLayout
+                android:id="@+id/layout_team2_player2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/green_withoutframe"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="placeholder" />
+
+                <TextView
+                    android:id="@+id/name_team2_player2"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/green_button_no_frame"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:onClick="increaseScore"
+                    android:text="player2"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:id="@+id/score_team2_player2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="50dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_team2_player3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_marginBottom="0dp"
+                android:orientation="vertical"
+                android:translationZ="90dp">
+
+                <TextView
+                    android:id="@+id/score_team2_player3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="50dp" />
+
+                <TextView
+                    android:id="@+id/name_team2_player3"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/green_button_no_frame"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:onClick="increaseScore"
+                    android:text="player3"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_team2_player4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_marginBottom="0dp"
+                android:orientation="vertical"
+                android:background="@drawable/green_withoutframe">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="placeholder" />
+
+                <TextView
+                    android:id="@+id/name_team2_player4"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/green_button_no_frame"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:onClick="increaseScore"
+                    android:text="player4"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:id="@+id/score_team2_player4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="50dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_team2_player5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_marginBottom="0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/score_team2_player5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="50dp" />
+
+                <TextView
+                    android:id="@+id/name_team2_player5"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/green_button_no_frame"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:onClick="increaseScore"
+                    android:text="player5"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/text_size" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Container_team2Strafschluck"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="0"
+            android:background="@drawable/grey_view"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:id="@+id/layout_team2_player1_strafschluck"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_marginBottom="0dp"
+                android:translationZ="90dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/score_team2_player1_strafschluck"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="50dp" />
+
+                <TextView
+                    android:id="@+id/name_team2_player1_strafschluck"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="fill_vertical"
+                    android:background="@drawable/green_button_no_frame"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:onClick="increaseScore"
+                    android:text="player1"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+
+            <!-- Nr 2-->
+            <LinearLayout
+                android:id="@+id/layout_team2_player2_strafschluck"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/green_withoutframe"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="placeholder" />
+
+                <TextView
+                    android:id="@+id/name_team2_player2_strafschluck"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/green_button_no_frame"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:onClick="increaseScore"
+                    android:text="player2"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:id="@+id/score_team2_player2_strafschluck"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="50dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_team2_player3_strafschluck"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_marginBottom="0dp"
+                android:orientation="vertical"
+                android:translationZ="90dp">
+
+                <TextView
+                    android:id="@+id/score_team2_player3_strafschluck"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="50dp" />
+
+                <TextView
+                    android:id="@+id/name_team2_player3_strafschluck"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/green_button_no_frame"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:onClick="increaseScore"
+                    android:text="player3"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_team2_player4_strafschluck"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_marginBottom="0dp"
+                android:orientation="vertical"
+                android:background="@drawable/green_withoutframe">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="placeholder" />
+
+                <TextView
+                    android:id="@+id/name_team2_player4_strafschluck"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/green_button_no_frame"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:onClick="increaseScore"
+                    android:text="player4"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:id="@+id/score_team2_player4_strafschluck"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="50dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_team2_player5_strafschluck"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_marginBottom="0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/score_team2_player5_strafschluck"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="50dp" />
+
+
+                <TextView
+                    android:id="@+id/name_team2_player5_strafschluck"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/green_button_no_frame"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:onClick="increaseScore"
+                    android:text="player5"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/text_size" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Container_team2Strafbier"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="0"
+            android:background="@drawable/grey_view"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:id="@+id/layout_team2_player1_strafbier"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_marginBottom="0dp"
+                android:translationZ="90dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/score_team2_player1_strafbier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="50dp" />
+
+
+                <TextView
+                    android:id="@+id/name_team2_player1_strafbier"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="fill_vertical"
+                    android:background="@drawable/green_button_no_frame"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:onClick="increaseScore"
+                    android:text="player1"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+
+            <!-- Nr 2-->
+            <LinearLayout
+                android:id="@+id/layout_team2_player2_strafbier"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/green_withoutframe"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="placeholder" />
+
+                <TextView
+                    android:id="@+id/name_team2_player2_strafbier"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/green_button_no_frame"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:onClick="increaseScore"
+                    android:text="player2"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:id="@+id/score_team2_player2_strafbier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="50dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_team2_player3_strafbier"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_marginBottom="0dp"
+                android:orientation="vertical"
+                android:translationZ="90dp">
+
+                <TextView
+                    android:id="@+id/score_team2_player3_strafbier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="50dp" />
+
+                <TextView
+                    android:id="@+id/name_team2_player3_strafbier"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/green_button_no_frame"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:onClick="increaseScore"
+                    android:text="player3"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_team2_player4_strafbier"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_marginBottom="0dp"
+                android:orientation="vertical"
+                android:background="@drawable/green_withoutframe">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="placeholder" />
+
+                <TextView
+                    android:id="@+id/name_team2_player4_strafbier"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/green_button_no_frame"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:onClick="increaseScore"
+                    android:text="player4"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:id="@+id/score_team2_player4_strafbier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="50dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_team2_player5_strafbier"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:layout_marginBottom="0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/score_team2_player5_strafbier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="50dp" />
+
+
+                <TextView
+                    android:id="@+id/name_team2_player5_strafbier"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/green_button_no_frame"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:onClick="increaseScore"
+                    android:text="player5"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/text_size" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.05" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_weight="0.2"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"
+                android:orientation="horizontal">
+
+
+                <!--Linear Layout für die Anleitung-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/infobox"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_bold"
+                        android:text="Treffer:"
+                        android:textColor="@color/textcolor"
+                        android:textSize="@dimen/text_size" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:text="Spieler:in antippen"
+                        android:textColor="@color/textcolor"
+                        android:textSize="@dimen/text_size" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:text="-"
+                        android:textColor="@color/textcolor"
+                        android:textSize="@dimen/text_size" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_bold"
+                        android:text="Treffer rückgängig:"
+                        android:textColor="@color/textcolor"
+                        android:textSize="@dimen/text_size" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:text="Spieler:in gedrückt halten"
+                        android:textColor="@color/textcolor"
+                        android:textSize="@dimen/text_size" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="0.4"
+                    android:background="@drawable/flunksaurier" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+
+            <!--Linear Layout für die Navigationszeile-->
+            <LinearLayout
+                android:id="@+id/foot"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.17"
+                android:background="@drawable/foot"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                <!--Linear Layout für die Navigationszeile-->
+                <LinearLayout
+                    android:id="@+id/navigationbar"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <LinearLayout
+                        android:id="@+id/bt_strafschluck"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/foot"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="strafschluckAnzeigen"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="@+id/navigationbar"
+                        app:layout_constraintEnd_toStartOf="@id/bt_treffer"
+                        app:layout_constraintStart_toStartOf="@+id/navigationbar">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="0dp"
+                            android:src="@drawable/strafschluck" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="0dp"
+                            android:fontFamily="@font/nunito_semibold"
+                            android:text="Strafschluck"
+                            android:textColor="@color/textcolor"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/bt_treffer"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/view_withoutframe_foot"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="trefferAnzeigen"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="@+id/navigationbar"
+                        app:layout_constraintEnd_toStartOf="@id/bt_strafbier"
+                        app:layout_constraintStart_toEndOf="@+id/bt_last_games"
+                        app:layout_constraintTop_toTopOf="@+id/navigationbar"
+                        app:layout_constraintVertical_bias="0.555">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="4dp"
+                            android:src="@drawable/treffer"
+                            app:tint="@color/textcolor" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="0dp"
+                            android:fontFamily="@font/nunito_semibold"
+                            android:text="Treffer"
+                            android:textColor="@color/textcolor"
+                            android:textSize="12dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bt_strafbier"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/foot"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="strafbierAnzeigen"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="@+id/navigationbar"
+                        app:layout_constraintEnd_toEndOf="@+id/navigationbar"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/bt_scoreboard"
+                        app:layout_constraintTop_toTopOf="@+id/navigationbar"
+                        app:layout_constraintVertical_bias="0.555">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="4dp"
+                            android:src="@drawable/strafbier"
+                            app:tint="@color/textcolor" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="0dp"
+                            android:fontFamily="@font/nunito_semibold"
+                            android:text="Strafbier"
+                            android:textColor="@color/textcolor"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

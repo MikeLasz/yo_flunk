@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    android:layout_margin="18dp"
+    android:padding="8dp"
+    android:scrollbars="vertical"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:visibility="gone"
+        android:src="@drawable/flunksaurier2"
+        android:background="@color/background"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txtView_nameTournament"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wie soll das Turnier heißen?"
+        app:layout_constraintTop_toBottomOf="@id/img_logo"
+        android:textSize="@dimen/medium_size"
+        android:textColor="@color/textcolor"
+        android:fontFamily="@font/nunito_semibold"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtView_nameTournament"
+        android:hint="Turniername"
+        android:textColorHint="@color/lightgreen"
+        android:backgroundTint="@color/darkgreen"
+        android:maxLines="1"
+        android:fontFamily="@font/nunito_semibold"
+        android:textColor="@color/textcolor"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:id="@+id/editTxt_tournamentName"/>
+
+    <TextView
+        android:id="@+id/txt_numgroups"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wieviele Gruppen soll es in der Gruppenphase geben?"
+        android:textSize="@dimen/medium_size"
+        android:textColor="@color/textcolor"
+        android:fontFamily="@font/nunito_semibold"
+        app:layout_constraintTop_toBottomOf="@id/editTxt_tournamentName"
+        app:layout_constraintBottom_toTopOf="@id/radio_numgroups"
+        />
+
+    <RadioGroup
+        android:id="@+id/radio_numgroups"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/txt_numgroups"
+        >
+        <RadioButton
+            android:id="@+id/radio_2groups"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:text="2 Gruppen"
+            android:fontFamily="@font/nunito_semibold"
+            android:textColor="@color/textcolor"
+        />
+        <RadioButton
+            android:id="@+id/radio_4groups"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:text="4 Gruppen"
+            android:fontFamily="@font/nunito_semibold"
+            android:textColor="@color/textcolor"
+            />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wenn ihr das Turnier nun startet, können sich
+keine weiteren Teams mehr anmelden."
+        android:id="@+id/txt_warning"
+        app:layout_constraintTop_toBottomOf="@id/radio_numgroups"
+        android:textSize="@dimen/medium_size"
+        android:fontFamily="@font/nunito_semibold"
+        android:textColor="@color/textcolor"
+        />
+
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txt_warning"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintRight_toLeftOf="@id/btn_start"
+        android:background="@drawable/button_grey_slim_frame"
+        android:text="Zurück"
+        android:textColor="@color/background"
+        />
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/btn_cancel"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_warning"
+        android:background="@drawable/button_grey_slim_frame"
+        android:text="Turnier starten"
+        android:textColor="@color/background"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

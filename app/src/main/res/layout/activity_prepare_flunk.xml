@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".PrepareFlunkActivity">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:background="@drawable/header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/txtView_league"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Flunkyballrunde erstellen"
+        android:textColor="@color/grey"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtView_league">
+
+        <LinearLayout
+            android:id="@+id/layout_selectedPlayers"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.55"
+            android:orientation="horizontal"
+            android:background="@drawable/view_withoutframe"
+            >
+            <LinearLayout
+                android:id="@+id/layout_team11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center|left"
+                android:layout_weight="1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:divider="@drawable/divider_vertical"
+                android:showDividers="middle"
+                >
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_team12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center|left"
+                android:layout_weight="1"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:divider="@drawable/divider_vertical"
+                android:showDividers="middle"
+                >
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="VS."
+                android:textColor="@color/textcolor"
+                android:textSize="@dimen/large_text"
+                android:gravity="center"
+                />
+            <LinearLayout
+                android:id="@+id/layout_team22"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center|right"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:divider="@drawable/divider_vertical"
+                android:showDividers="middle"
+                >
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_team21"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center|right"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+                android:divider="@drawable/divider_vertical"
+                android:showDividers="middle"
+                >
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_settings"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.65"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/infobox">
+
+            <com.example.yo_flunk.MultiSpinner
+                android:id="@+id/multispinner_players"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/lightgreen_box"
+                tools:ignore="MissingClass" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Spiel teilen:"
+                android:textColor="@color/textcolor"
+                android:fontFamily="@font/nunito_semibold"
+                android:textSize="18dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="12dp"
+
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="  ...per Push-Up Nachricht"
+                    android:textSize="@dimen/text_size"
+                    android:fontFamily="@font/nunito_bold"
+                    android:textColor="@color/textcolor"
+                    android:layout_marginRight="50dp"
+                    />
+                <Switch
+                    android:id="@+id/switch_pushUp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-50dp"
+                    android:checked="true"
+                    android:theme="@style/SwitchTheme"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="  ...per Heatmap"
+                    android:textSize="@dimen/text_size"
+                    android:fontFamily="@font/nunito_bold"
+                    android:textColor="@color/textcolor"
+                    android:layout_marginRight="50dp"
+                    />
+                <Switch
+                    android:id="@+id/switch_heatmap"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-50dp"
+                    android:theme="@style/SwitchTheme"
+                    android:checked="false"
+                    />
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                tools:layout_editor_absoluteX="24dp"
+                tools:layout_editor_absoluteY="236dp"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    tools:ignore="MissingConstraints"
+                    android:background="@drawable/shadow"/>
+
+                <TextView
+                    android:id="@+id/create_teams"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/green_button"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:onClick="CreateTeams"
+                    android:text="Runde starten"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginRight="2dp"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/large_text"
+                    tools:ignore="MissingConstraints"
+                    android:autoSizeTextType="uniform"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:maxLines="1"                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

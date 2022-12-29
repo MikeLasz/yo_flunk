@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:background="@drawable/header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/txtView_league"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="10dp"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="1 Stoppenberg Money Gang"
+        android:textColor="@color/grey"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="0dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.025"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.9"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="57dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/layout_navigationBar"
+            >
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"
+                >
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:background="@drawable/shadow"
+                    android:layout_height="fill_parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/bt_createPlayer"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/button_grey"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_bold"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginRight="2dp"
+                    android:gravity="center"
+                    android:onClick="CreatePlayer"
+                    android:text="Flunkyballer:in erstellen"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/textcolor"
+                    android:textSize="40dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.025" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"
+                app:layout_constraintBottom_toTopOf="@+id/bt_planTournament"
+
+
+                >
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:background="@drawable/shadow"
+                android:layout_height="fill_parent"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/bt_startFlunky"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/button_grey"
+                android:fontFamily="@font/nunito_bold"
+                android:onClick="StartFlunk"
+                android:gravity="center"
+                android:layout_marginBottom="4dp"
+                android:layout_marginRight="2dp"
+                android:text="Flunkyballrunde starten"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/textcolor"
+                android:textSize="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.025"/>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"
+                app:layout_constraintBottom_toTopOf="@+id/bt_planTournament"
+
+
+                >
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:background="@drawable/shadow"
+                    android:layout_height="fill_parent"
+                    tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/bt_planTournament"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/button_grey"
+                android:fontFamily="@font/nunito_bold"
+                android:gravity="center"
+                android:text="Turnierplaner"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/textcolor"
+                android:textSize="40dp"
+                android:onClick="PlanTournament"
+                android:layout_marginBottom="4dp"
+                android:layout_marginRight="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.025"/>
+
+        <LinearLayout
+            android:id="@+id/layout_foot"
+            android:orientation="horizontal"
+            android:gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.15"
+            android:background="@drawable/foot"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:id="@+id/layout_navigationBar"
+                android:orientation="horizontal"
+                android:gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                app:layout_constraintStart_toStartOf="parent" >
+
+                <LinearLayout
+                    android:id="@+id/bt_scoreboard"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="0.2"
+                    android:clickable="true"
+                    android:onClick="ShowScoreboard"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="@+id/layout_navigationBar"
+                    app:layout_constraintEnd_toStartOf="@id/bt_heatmap"
+                    app:layout_constraintStart_toStartOf="@+id/layout_navigationBar">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:src="@drawable/tabelle"
+                        app:tint="@color/textcolor" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:text="Tabelle"
+                        android:textColor="@color/textcolor"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bt_heatmap"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.2"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:onClick="OpenHeatmap"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@+id/layout_navigationBar"
+                    app:layout_constraintStart_toEndOf="@+id/bt_scoreboard"
+                    app:layout_constraintEnd_toStartOf="@id/bt_stats"
+                    app:layout_constraintTop_toTopOf="@+id/layout_navigationBar"
+                    app:layout_constraintVertical_bias="0.555">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="0dp"
+                        android:src="@drawable/heatmap"
+                        android:tint="@color/textcolor" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:text="Heatmap"
+                        android:textColor="@color/textcolor"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bt_stats"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.2"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@+id/layout_navigationBar"
+                    app:layout_constraintStart_toEndOf="@+id/bt_heatmap"
+                    app:layout_constraintEnd_toStartOf="@id/bt_rules"
+                    app:layout_constraintTop_toTopOf="@+id/layout_navigationBar"
+                    app:layout_constraintVertical_bias="0.555">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="0dp"
+                        android:src="@drawable/statistiken"
+                        android:clickable="true"
+                        android:onClick="OpenStats"
+                        app:tint="@color/textcolor" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:text="Statistiken"
+                        android:textColor="@color/textcolor"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bt_rules"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.2"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@+id/layout_navigationBar"
+                    app:layout_constraintEnd_toEndOf="@+id/layout_navigationBar"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/bt_stats"
+                    app:layout_constraintTop_toTopOf="@+id/layout_navigationBar"
+                    app:layout_constraintVertical_bias="0.555">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="0dp"
+                        android:clickable="true"
+                        android:onClick="OpenRules"
+                        android:src="@drawable/regelwerk"
+                        app:tint="@color/textcolor" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:text="Regelwerk"
+                        android:textColor="@color/textcolor"
+                        android:textSize="12dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

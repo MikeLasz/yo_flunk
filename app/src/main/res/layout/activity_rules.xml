@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".RulesActivity">
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:background="@drawable/header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="@font/nunito_bold"
+        android:padding="10dp"
+        android:text="Das Regelwerk"
+        android:textColor="@color/grey"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="0dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.025"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.9"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/rules"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:padding="8dp"
+                android:fontFamily="@font/nunito_semibold"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/textcolor"
+                android:textSize="@dimen/text_size"
+                android:scrollbars="vertical"
+                android:background="@drawable/infobox"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/foot"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"
+        android:background="@drawable/foot"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/navigationbar"
+            android:orientation="horizontal"
+            android:gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent" >
+
+            <LinearLayout
+                android:id="@+id/btAufstellung"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="0.2"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="@+id/navigationbar"
+                app:layout_constraintEnd_toStartOf="@id/bt_heatmap"
+                app:layout_constraintStart_toStartOf="@+id/navigationbar">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.8"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:src="@drawable/flunksaurier"
+                    android:clickable="true"
+                    android:onClick="ShowAufstellung"
+                    app:tint="@color/textcolor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="-2dp"
+                    android:layout_gravity="bottom"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Aufstellung"
+                    android:hyphenationFrequency="none"
+                    android:textColor="@color/textcolor"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bt_ablauf"
+                android:layout_width="0dp"
+                android:layout_weight="0.2"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:clickable="true"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/navigationbar"
+                app:layout_constraintStart_toEndOf="@+id/bt_scoreboard"
+                app:layout_constraintEnd_toStartOf="@id/bt_stats"
+                app:layout_constraintTop_toTopOf="@+id/navigationbar"
+                app:layout_constraintVertical_bias="0.555">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.8"
+                    android:layout_marginTop="0dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="0dp"
+                    android:clickable="true"
+                    android:onClick="ShowAblauf"
+                    android:src="@drawable/letzte_spiele_trans"
+                    app:tint="@color/textcolor"
+                     />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2"
+                    android:layout_marginTop="0dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Ablauf"
+                    app:tint="@color/textcolor"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bt_strafen"
+                android:layout_width="0dp"
+                android:layout_weight="0.2"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="16dp"
+                android:clickable="true"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/navigationbar"
+                app:layout_constraintStart_toEndOf="@+id/bt_heatmap"
+                app:layout_constraintEnd_toStartOf="@id/bt_rules"
+                app:layout_constraintTop_toTopOf="@+id/navigationbar"
+                app:layout_constraintVertical_bias="0.555">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.8"
+                    android:layout_marginTop="0dp"
+                    android:padding="4dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="0dp"
+                    android:src="@drawable/whistle"
+                    android:clickable="true"
+                    android:onClick="ShowStrafen"
+                    app:tint="@color/textcolor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2"
+                    android:layout_marginTop="0dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Strafen"
+                    android:textColor="@color/textcolor"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bt_faqs"
+                android:layout_width="0dp"
+                android:layout_weight="0.2"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/navigationbar"
+                app:layout_constraintEnd_toEndOf="@+id/navigationbar"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/bt_stats"
+                app:layout_constraintTop_toTopOf="@+id/navigationbar"
+                app:layout_constraintVertical_bias="0.555">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.8"
+                    android:padding="4dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="0dp"
+                    android:clickable="true"
+                    android:onClick="ShowFaq"
+                    android:src="@drawable/faq"
+                    android:backgroundTint="@color/background"
+                    app:tint="@color/textcolor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2"
+                    android:layout_marginTop="0dp"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="FAQ's"
+                    android:textColor="@color/textcolor"
+                    android:textSize="12dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

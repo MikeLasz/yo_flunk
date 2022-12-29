@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment_trefferTournament">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Die größten Flunker:\n Wer hat wie oft getroffen?"
+            android:maxLines="2"
+            android:autoSizeTextType="uniform"
+            android:textColor="@color/textcolor"
+            android:fontFamily="@font/nunito_semibold"
+            android:textSize="@dimen/large_text"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/table"
+            android:layout_width="346dp"
+            android:layout_height="0dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_margin="16dp"
+            app:layout_constraintTop_toBottomOf="@id/txt_info"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/table_box"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="3dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/table_lefttop"
+                    android:fontFamily="@font/nunito_bold"
+                    android:textColor="@color/textcolor"
+                    android:gravity="center"
+                    android:text="#"
+                    android:textSize="16dp" />
+
+
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.45"
+                    android:paddingLeft="8dp"
+                    android:background="@color/table_grey"
+                    android:fontFamily="@font/nunito_bold"
+                    android:textColor="@color/textcolor"
+                    android:text="Name"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:background="@color/table_green"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:textColor="@color/textcolor"
+                    android:text="W"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:background="@color/table_grey"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:textColor="@color/textcolor"
+                    android:text="L"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/tabel_righttop_green"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:textColor="@color/textcolor"
+                    android:text="Hits"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="22dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                app:layout_constraintTop_toTopOf="@+id/table"
+                tools:layout_editor_absoluteX="192dp"
+                tools:layout_editor_absoluteY="195dp"
+                android:textColor="@color/textcolor"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="-22dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginBottom="3dp"
+
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/table_leftbot"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text=""
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.45"
+                    android:background="@color/table_grey"
+                    android:fontFamily="@font/nunito_bold"
+                    android:text=""
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1"
+                    android:background="@color/table_green"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text=""
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1"
+                    android:background="@color/table_grey"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text=""
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/table_rightbot_green"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text=""
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

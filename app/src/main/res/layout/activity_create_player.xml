@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".CreatePlayerActivity">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:background="@drawable/header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/txtView_league"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="@font/nunito_bold"
+        android:padding="10dp"
+        android:text="Flunkyballer:in erstellen"
+        android:textColor="@color/grey"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="57dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="8dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/layout_box"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:orientation="vertical"
+            android:background="@drawable/button_grey_slim_frame"
+            >
+
+            <LinearLayout
+                android:id="@+id/layout_avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.7"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/infobox"
+                >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.15"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.3"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:onClick="ChangeHeadLeft"
+                        >
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.1"
+                            />
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.3"
+                            android:background="@drawable/pfeil_links_grun_1"
+                            />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.1"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.6"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:onClick="ChangeBodyLeft"
+                        >
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.35"
+                            />
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.3"
+                            android:background="@drawable/pfeil_links_grun_1"
+                            />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.35"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/avatar"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.7"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/image_head"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/head1"
+                        app:layout_constraintBottom_toTopOf="@+id/image_body"
+                        app:layout_constraintDimensionRatio="H,1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_weight="0.3"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="2dp"
+                        tools:ignore="MissingConstraints,Suspicious0dp" />
+
+                    <ImageView
+                        android:id="@+id/image_body"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/body1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="H,1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/image_head"
+                        app:layout_constraintVertical_weight="0.6"
+                        tools:ignore="MissingConstraints" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.15"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.3"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:onClick="ChangeHeadRight"
+                        >
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.1"
+                            />
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.3"
+                            android:background="@drawable/pfeil_rechts_grun_1"
+                            />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.1"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.6"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:onClick="ChangeBodyRight"
+                        >
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.35"
+                            />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.3"
+                            android:background="@drawable/pfeil_rechts_grun_1"                            />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.35"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.4"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="Name"
+                    android:textColorHint="@color/lightgreen"
+                    android:backgroundTint="@color/darkgreen"
+                    android:textColor="@color/textcolor"
+                    android:layout_marginTop="8dp"
+                    android:paddingLeft="16dp"
+                    android:imeOptions="actionNext"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/motto"/>
+
+                <EditText
+                    android:id="@+id/motto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="Motto"
+                    android:textColorHint="@color/lightgreen"
+                    android:backgroundTint="@color/darkgreen"
+                    android:textColor="@color/textcolor"
+                    android:imeOptions="actionNext"
+                    android:paddingLeft="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/name"
+                    app:layout_constraintBottom_toTopOf="@+id/bier"/>
+                <EditText
+                    android:id="@+id/bier"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="Flunkbier"
+                    android:textColorHint="@color/lightgreen"
+                    android:backgroundTint="@color/darkgreen"
+                    android:imeOptions="actionDone"
+                    android:textColor="@color/textcolor"
+                    android:paddingLeft="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/motto"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="16dp"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.05"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            >
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:background="@drawable/shadow"
+            android:layout_height="fill_parent"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/button_createplayer"
+            android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+            android:clickable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/textcolor"
+            android:background="@drawable/green_button"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:onClick="SavePlayerToDatabase"
+            android:text="Fertig"
+            android:fontFamily="@font/nunito_bold"
+            android:textSize="40dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginRight="2dp"
+            tools:ignore="MissingConstraints"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMaxTextSize="60dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

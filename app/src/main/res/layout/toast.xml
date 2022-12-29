@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/custom_toast_layout"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/button_grey_slim_frame" >
+
+
+
+    <TextView android:id="@+id/toast_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/textcolor"
+        android:text="test"
+        android:autoSizeTextType="uniform"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:maxLines="1"
+        android:fontFamily="@font/nunito_bold"/>
+
+</LinearLayout>

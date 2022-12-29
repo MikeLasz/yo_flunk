@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment_gamesPlayed">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Die größten Flunker:\n Wer hat wie oft geflunkt?"
+            android:textColor="@color/textcolor"
+            android:fontFamily="@font/nunito_semibold"
+            android:textSize="@dimen/large_text"
+            />
+
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_info"
+            tools:layout_editor_absoluteX="0dp"
+            android:layout_marginBottom="8dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    >
+
+    <ImageView
+        android:id="@+id/pokal_team1"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="110dp"
+        android:src="@drawable/tropy_farbe_2"
+        android:visibility="visible"
+        android:translationZ="90dp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+
+    <ImageView
+        android:id="@+id/pokal_team2"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="110dp"
+        android:src="@drawable/tropy_farbe_2"
+        android:visibility="visible"
+        android:translationZ="90dp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="center|bottom"
+            android:clickable="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_grey_slim_frame"
+            android:divider="@drawable/divider_horizontal"
+            android:gravity="center|bottom"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <TextView
+                android:id="@+id/txtview_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gruppe .. "
+                android:textColor="@color/textcolor"
+                android:fontFamily="@font/nunito_semibold"
+                android:textSize="@dimen/medium_size"
+                android:paddingTop="8dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                <LinearLayout
+                    android:id="@+id/layout_lg_team1"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:textColor="@color/textcolor"
+                    android:background="@drawable/button_winner_last_games"
+                    android:gravity="center"
+                    android:orientation="vertical"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/textTeam1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@color/textcolor"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:maxLines="2"
+                        android:autoSizeTextType="uniform"
+                        android:hyphenationFrequency="none"
+                        android:gravity="center|center_vertical"
+                        android:textSize="22dp" />
+
+                </LinearLayout>
+
+
+                <Space
+                    android:layout_width="300dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+
+                <TextView
+                    android:id="@+id/imageViewItem"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center|bottom"
+                    android:textColor="@color/textcolor"
+                    android:text=":"
+                    android:textSize="50dp" />
+
+                <Space
+                    android:layout_width="300dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:id="@+id/layout_lg_team2"
+                    android:layout_width="120dp"
+                    android:textColor="@color/textcolor"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_winner_last_games"
+                    android:gravity="center"
+                    android:orientation="vertical"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/textTeam2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@color/textcolor"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:maxLines="2"
+                        android:autoSizeTextType="uniform"
+                        android:hyphenationFrequency="none"
+                        android:gravity="center|center_vertical"
+                        android:textSize="22dp" />
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

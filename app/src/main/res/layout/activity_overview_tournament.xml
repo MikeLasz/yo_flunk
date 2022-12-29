@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OverviewTournamentActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightgreen"
+        android:theme="@style/Theme.Yoflunk.AppBarOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:background="@color/lightgreen"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_marginLeft="8dp"
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="66dp"
+                android:layout_marginTop="-4dp"
+                android:background="@drawable/header"
+                android:minHeight="?actionBarSize"
+                android:layout_weight="1"
+                android:fontFamily="@font/nunito_bold"
+                android:textColor="@color/grey"
+                android:textSize="22dp"
+                android:text="Turnierübersicht: \n Karflunkytag 2022"
+                android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Turnier \nbeenden"
+                android:gravity="center"
+                android:fontFamily="@font/nunito_semibold"
+                android:textColor="@color/textcolor"
+                android:textSize="16dp"
+                android:padding="8dp"
+                android:layout_gravity="right"
+                android:onClick="endTournament"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/button_alert"
+                />
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="66dp">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            app:tabSelectedTextColor="@color/textcolor"
+            app:tabIconTint="@color/textcolor"
+            app:tabTextColor="@color/textcolor"
+            app:tabTextAppearance="@style/TabLayoutStyle_tournament"
+            app:tabBackground="@drawable/tabs_selector"
+            android:background="?attr/colorPrimary"/>
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.85"
+            android:background="@color/background"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+
+        <LinearLayout
+        android:id="@+id/foot"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"
+        android:background="@drawable/foot"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/navigationbar"
+            android:orientation="horizontal"
+            android:gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            app:layout_constraintStart_toStartOf="parent" >
+
+            <LinearLayout
+                android:id="@+id/bt_scoreboard"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="0.2"
+                android:clickable="true"
+                android:onClick="openGroups"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="@+id/navigationbar"
+                app:layout_constraintEnd_toStartOf="@id/bt_heatmap"
+                app:layout_constraintStart_toStartOf="@+id/navigationbar">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.7"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:src="@drawable/scoreboard"
+                    app:tint="@color/textcolor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:layout_marginTop="0dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Gruppenphase"
+                    android:textColor="@color/textcolor"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bt_heatmap"
+                android:layout_width="0dp"
+                android:layout_weight="0.2"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="openNextgames"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/navigationbar"
+                app:layout_constraintStart_toEndOf="@+id/bt_scoreboard"
+                app:layout_constraintEnd_toStartOf="@id/bt_stats"
+                app:layout_constraintTop_toTopOf="@+id/navigationbar"
+                app:layout_constraintVertical_bias="0.555">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.7"
+                    android:layout_marginTop="0dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="0dp"
+                    android:src="@drawable/spiele"
+                    android:tint="@color/textcolor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:layout_marginTop="0dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Nächste Spiele"
+                    android:maxLines="1"
+                    android:textColor="@color/textcolor"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bt_stats"
+                android:layout_width="0dp"
+                android:layout_weight="0.2"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:clickable="true"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/navigationbar"
+                app:layout_constraintStart_toEndOf="@+id/bt_heatmap"
+                app:layout_constraintEnd_toStartOf="@id/bt_rules"
+                app:layout_constraintTop_toTopOf="@+id/navigationbar"
+                app:layout_constraintVertical_bias="0.555">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.7"
+                    android:layout_marginTop="0dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="0dp"
+                    android:src="@drawable/turnier_radial"
+                    android:clickable="true"
+                    android:onClick="openPlayoffs"
+                    app:tint="@color/textcolor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:layout_marginTop="0dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Playoffs"
+                    android:textColor="@color/textcolor"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

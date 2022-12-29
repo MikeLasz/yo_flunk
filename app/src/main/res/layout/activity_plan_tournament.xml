@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".PlanTournamentActivity">
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:background="@drawable/header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/txtView_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Turnierplaner"
+        android:padding="10dp"
+        android:textColor="@color/grey"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.9"
+            android:layout_marginTop="60dp"
+            android:orientation="vertical"
+            android:background="@drawable/table_box">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="0.7"
+                tools:layout_editor_absoluteX="192dp"
+                tools:layout_editor_absoluteY="195dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_weight="0.15"
+                android:layout_height="0dp"
+                tools:layout_editor_absoluteX="24dp"
+                tools:layout_editor_absoluteY="236dp"
+                android:layout_marginBottom="24dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                >
+                <TextView
+                    android:id="@+id/shadow2"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    tools:ignore="MissingConstraints"
+                    android:background="@drawable/shadow"
+                    />
+
+                <TextView
+                    android:id="@+id/btn_addTeam"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/green_button"
+                    android:clickable="true"
+                    android:onClick="createNewTeam"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
+                    android:text="Team anmelden"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginRight="2dp"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/large_text"
+                    android:autoSizeTextType="uniform"
+                    tools:ignore="MissingConstraints"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:maxLines="1"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_weight="0.2"
+                android:layout_height="0dp"
+                tools:layout_editor_absoluteX="24dp"
+                tools:layout_editor_absoluteY="236dp"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:id="@+id/shadow1"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    tools:ignore="MissingConstraints"
+                    android:background="@drawable/shadow"
+                    />
+
+                <TextView
+                    android:id="@+id/btn_start"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/green_button"
+                    android:clickable="true"
+                    android:onClick="startTournamentPopup"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="Turnier starten"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginRight="2dp"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/large_text"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:maxLines="1"
+                    tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

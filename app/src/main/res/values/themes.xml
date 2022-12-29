@@ -1,0 +1,61 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Yoflunk" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/lightgreen</item>
+        <item name="colorPrimaryVariant">@color/darkgreen</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/lightgreen</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.Yoflunk.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="TabLayoutStyle" parent="Base.Widget.Design.TabLayout">
+        <item name="android:fontFamily">@font/nunito_bold</item>
+        <item name="tabTextColor">@color/grey</item>
+        <item name="android:textSize">@dimen/medium_size</item>
+        <item name="tabSelectedTextColor">@color/textcolor</item>
+    </style>
+
+    <style name="TabLayoutStyle_tournament" parent="Base.Widget.Design.TabLayout">
+        <item name="android:fontFamily">@font/nunito_bold</item>
+        <item name="tabTextColor">@color/grey</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="tabSelectedTextColor">@color/textcolor</item>
+    </style>
+
+    <style name="TabLayoutStyle_tournamentGroupStage" parent="Base.Widget.Design.TabLayout">
+        <item name="android:fontFamily">@font/nunito_semibold</item>
+        <item name="tabTextColor">@color/grey</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="tabSelectedTextColor">@color/textcolor</item>
+    </style>
+
+    <style name="TabLayoutStyle_tabelle" parent="Base.Widget.Design.TabLayout">
+        <item name="android:fontFamily">@font/nunito_bold</item>
+        <item name="tabTextColor">@color/grey</item>
+        <item name="android:textSize">12dp</item>
+        <item name="tabSelectedTextColor">@color/textcolor</item>
+    </style>
+
+    <style name="TabLayoutStyle_turnier" parent="Base.Widget.Design.TabLayout">
+        <item name="android:fontFamily">@font/nunito_semibold</item>
+        <item name="tabTextColor">@color/grey</item>
+        <item name="android:textSize">12dp</item>
+        <item name="tabSelectedTextColor">@color/textcolor</item>
+    </style>
+
+
+    <style name="Theme.Yoflunk.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Yoflunk.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>
