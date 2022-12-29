@@ -1,0 +1,288 @@
+{
+  "insert_league_name": {
+    "games": [
+      {
+        "geotag": "geotag",
+        "knechtung": false,
+        "numTreffer1": [
+          0
+        ],
+        "numTreffer2": [
+          0
+        ],
+        "strafbier1": [
+          0
+        ],
+        "strafbier2": [
+          0
+        ],
+        "strafrunde1": [
+          0
+        ],
+        "strafrunde2": [
+          0
+        ],
+        "team1Players": [
+          "first"
+        ],
+        "team1Win": true,
+        "team2Players": [
+          "second"
+        ],
+        "timeEnd": {
+          "date": 26,
+          "day": 4,
+          "hours": 14,
+          "minutes": 22,
+          "month": 4,
+          "seconds": 20,
+          "time": 1653567740607,
+          "timezoneOffset": -120,
+          "year": 122
+        },
+        "timeStart": {
+          "date": 26,
+          "day": 4,
+          "hours": 14,
+          "minutes": 22,
+          "month": 4,
+          "seconds": 11,
+          "time": 1653567731940,
+          "timezoneOffset": -120,
+          "year": 122
+        }
+      },
+      null,
+      {
+        "geotag": "geotag",
+        "knechtung": false,
+        "numTreffer1": [
+          0
+        ],
+        "numTreffer2": [
+          0
+        ],
+        "strafbier1": [
+          0
+        ],
+        "strafbier2": [
+          0
+        ],
+        "strafrunde1": [
+          0
+        ],
+        "strafrunde2": [
+          0
+        ],
+        "team1Players": [
+          "Mike"
+        ],
+        "team1Win": false,
+        "team2Players": [
+          "Testge"
+        ],
+        "timeEnd": {
+          "date": 27,
+          "day": 5,
+          "hours": 21,
+          "minutes": 55,
+          "month": 4,
+          "seconds": 33,
+          "time": 1653681333106,
+          "timezoneOffset": -120,
+          "year": 122
+        },
+        "timeStart": {
+          "date": 27,
+          "day": 5,
+          "hours": 21,
+          "minutes": 55,
+          "month": 4,
+          "seconds": 28,
+          "time": 1653681328579,
+          "timezoneOffset": -120,
+          "year": 122
+        }
+      }
+    ],
+    "highlights": [
+      null,
+      "Insert a highlight here."
+    ],
+    "users": {
+      "inituser1": {
+        "bodyId": 0,
+        "elo": 250,
+        "favBeer": "",
+        "headId": 0,
+        "motto": "",
+        "name": "first",
+        "numKnechtungen": 0,
+        "numLoses": 0,
+        "numStrafbier": 0,
+        "numStrafrunden": 0,
+        "numTreffer": 0,
+        "numWasKnechtet": 0,
+        "numWins": 0
+      },
+      "inituser2": {
+        "bodyId": 2,
+        "elo": 250,
+        "favBeer": " ",
+        "headId": 10,
+        "motto": "",
+        "name": "second",
+        "numKnechtungen": 0,
+        "numLoses": 0,
+        "numStrafbier": 0,
+        "numStrafrunden": 0,
+        "numTreffer": 0,
+        "numWasKnechtet": 0,
+        "numWins": 0
+      }
+    }
+  },
+  "insert_league_name_prod": {
+    "games": [
+      {
+        "geotag": "geotag",
+        "knechtung": false,
+        "numTreffer1": [
+          0
+        ],
+        "numTreffer2": [
+          0
+        ],
+        "strafbier1": [
+          0
+        ],
+        "strafbier2": [
+          0
+        ],
+        "strafrunde1": [
+          0
+        ],
+        "strafrunde2": [
+          0
+        ],
+        "team1Players": [
+          "first"
+        ],
+        "team1Win": true,
+        "team2Players": [
+          "second"
+        ],
+        "timeEnd": {
+          "date": 26,
+          "day": 4,
+          "hours": 14,
+          "minutes": 22,
+          "month": 4,
+          "seconds": 20,
+          "time": 1653567740607,
+          "timezoneOffset": -120,
+          "year": 122
+        },
+        "timeStart": {
+          "date": 26,
+          "day": 4,
+          "hours": 14,
+          "minutes": 22,
+          "month": 4,
+          "seconds": 11,
+          "time": 1653567731940,
+          "timezoneOffset": -120,
+          "year": 122
+        }
+      },
+      null,
+      {
+        "geotag": "geotag",
+        "knechtung": false,
+        "numTreffer1": [
+          0
+        ],
+        "numTreffer2": [
+          0
+        ],
+        "strafbier1": [
+          0
+        ],
+        "strafbier2": [
+          0
+        ],
+        "strafrunde1": [
+          0
+        ],
+        "strafrunde2": [
+          0
+        ],
+        "team1Players": [
+          "Mike"
+        ],
+        "team1Win": false,
+        "team2Players": [
+          "Testge"
+        ],
+        "timeEnd": {
+          "date": 27,
+          "day": 5,
+          "hours": 21,
+          "minutes": 55,
+          "month": 4,
+          "seconds": 33,
+          "time": 1653681333106,
+          "timezoneOffset": -120,
+          "year": 122
+        },
+        "timeStart": {
+          "date": 27,
+          "day": 5,
+          "hours": 21,
+          "minutes": 55,
+          "month": 4,
+          "seconds": 28,
+          "time": 1653681328579,
+          "timezoneOffset": -120,
+          "year": 122
+        }
+      }
+    ],
+    "highlights": [
+      null,
+      "Insert a highlight here."
+    ],
+    "users": {
+      "inituser1": {
+        "bodyId": 0,
+        "elo": 250,
+        "favBeer": "",
+        "headId": 0,
+        "motto": "",
+        "name": "first",
+        "numKnechtungen": 0,
+        "numLoses": 0,
+        "numStrafbier": 0,
+        "numStrafrunden": 0,
+        "numTreffer": 0,
+        "numWasKnechtet": 0,
+        "numWins": 0
+      },
+      "inituser2": {
+        "bodyId": 2,
+        "elo": 250,
+        "favBeer": " ",
+        "headId": 10,
+        "motto": "",
+        "name": "second",
+        "numKnechtungen": 0,
+        "numLoses": 0,
+        "numStrafbier": 0,
+        "numStrafrunden": 0,
+        "numTreffer": 0,
+        "numWasKnechtet": 0,
+        "numWins": 0
+      }
+    }
+  },
+}

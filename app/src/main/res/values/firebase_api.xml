@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="firebase_link">Here commes your firebase link</string>
-    <string name="fcm_server_key">Here commes your firebase server key</string>
+    <string name="firebase_link">Here comes your firebase link</string>
+    <string name="fcm_server_key">Here comes your firebase server key</string>
     <bool name="dev_version">true</bool>
-    <string name="league">name of the league in your firebase database used for development</string>
-    <string name="league_prod">name of the league in your firebase database used for production</string>
+    <string name="league">insert_league_name</string>
+    <string name="league_prod">insert_league_name_prod</string>
 </resources>
