@@ -2,7 +2,7 @@
 
 # Welcome! 
 This GitHub repository contains the source code to build the Android application **Yo Flunk!**, which helps organizing and visualizing [flunkyball](https://www.youtube.com/watch?v=YfvTQjoIykY) matches. It allows to setup a league, in which matches are tracked and which rates users based on their flunkyball performance. Similar to chess, we implemented an ELO-rating system to calculate scores. Besides that, **Yo Flunk!** generates performance-related charts and statistics, and helps you organizing flunkyball tournaments. 
-For more information and demonstrations, check out the [GitHub webpage](https://mikelasz.github.io/yo_flunk_page/). 
+For more information and demonstrations, check out the [GitHub webpage](https://mikelasz.github.io/yo_flunk/). 
 
 # How to install **Yo Flunk!**
 1. Clone the repository and open the project via **Android Studio**. Executing the app from Android Studio should build all necessary remaining files.  
